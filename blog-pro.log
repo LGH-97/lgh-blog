@@ -1,0 +1,256 @@
+2020-04-05 17:57:35.123  INFO 4856 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Starting LghBlogApplication on DESKTOP-NO3AVTJ with PID 4856 (F:\IdeaProjects\lgh-blog\target\classes started by LGH in F:\IdeaProjects\lgh-blog)
+2020-04-05 17:57:35.128 DEBUG 4856 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-05 17:57:35.130  INFO 4856 --- [restartedMain] com.lgh.blog.LghBlogApplication          : No active profile set, falling back to default profiles: default
+2020-04-05 17:57:35.341  INFO 4856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 17:57:35.342  INFO 4856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 17:57:41.258  INFO 4856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-05 17:57:41.297  INFO 4856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 17:57:41.297  INFO 4856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-05 17:57:41.568  INFO 4856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 17:57:41.568  INFO 4856 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6226 ms
+2020-04-05 17:57:42.668  WARN 4856 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'testService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testService' defined in file [F:\IdeaProjects\lgh-blog\target\classes\com\lgh\blog\service\TestService.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+2020-04-05 17:57:42.670  INFO 4856 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-04-05 17:57:42.673  INFO 4856 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-05 17:57:42.749  INFO 4856 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-05 17:57:42.832 ERROR 4856 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'testService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testService' defined in file [F:\IdeaProjects\lgh-blog\target\classes\com\lgh\blog\service\TestService.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.lgh.blog.LghBlogApplication.main(LghBlogApplication.java:12) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testService' defined in file [F:\IdeaProjects\lgh-blog\target\classes\com\lgh\blog\service\TestService.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 35 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 48 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595) ~[mybatis-spring-2.0.4.jar:2.0.4]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475) ~[mybatis-spring-2.0.4.jar:2.0.4]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615) ~[mybatis-spring-2.0.4.jar:2.0.4]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$805e363.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$805e363$$FastClassBySpringCGLIB$$b43d6d7a.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$805e363.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.2.jar:2.1.2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 49 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [F:\IdeaProjects\lgh-blog\target\classes\mybatis\mapper\TestMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593) ~[mybatis-spring-2.0.4.jar:2.0.4]
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:137) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:130) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.5.4.jar:3.5.4]
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'test'.  Cause: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.4.jar:3.5.4]
+	... 68 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: test
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.4.jar:3.5.4]
+	... 70 common frames omitted
+
+2020-04-05 18:05:01.768  INFO 10812 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Starting LghBlogApplication on DESKTOP-NO3AVTJ with PID 10812 (F:\IdeaProjects\lgh-blog\target\classes started by LGH in F:\IdeaProjects\lgh-blog)
+2020-04-05 18:05:01.784 DEBUG 10812 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-05 18:05:01.794  INFO 10812 --- [restartedMain] com.lgh.blog.LghBlogApplication          : No active profile set, falling back to default profiles: default
+2020-04-05 18:05:01.922  INFO 10812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 18:05:01.923  INFO 10812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 18:05:04.910  INFO 10812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-05 18:05:04.922  INFO 10812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 18:05:04.922  INFO 10812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-05 18:05:05.074  INFO 10812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 18:05:05.075  INFO 10812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3151 ms
+2020-04-05 18:05:06.159  INFO 10812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 18:05:06.388  WARN 10812 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-04-05 18:05:06.588  WARN 10812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-04-05 18:05:06.642  INFO 10812 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-05 18:05:06.659  INFO 10812 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-05 18:05:06.667 ERROR 10812 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-04-05 18:05:06.672  INFO 10812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-05 18:05:06.673  INFO 10812 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-04-05 18:06:39.359  INFO 11704 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Starting LghBlogApplication on DESKTOP-NO3AVTJ with PID 11704 (F:\IdeaProjects\lgh-blog\target\classes started by LGH in F:\IdeaProjects\lgh-blog)
+2020-04-05 18:06:39.364 DEBUG 11704 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-05 18:06:39.365  INFO 11704 --- [restartedMain] com.lgh.blog.LghBlogApplication          : No active profile set, falling back to default profiles: default
+2020-04-05 18:06:39.495  INFO 11704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 18:06:39.496  INFO 11704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 18:06:42.991  INFO 11704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6666 (http)
+2020-04-05 18:06:43.017  INFO 11704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 18:06:43.017  INFO 11704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-05 18:06:43.292  INFO 11704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 18:06:43.293  INFO 11704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3797 ms
+2020-04-05 18:06:44.341  INFO 11704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 18:06:44.510  WARN 11704 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-04-05 18:06:44.672  WARN 11704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-04-05 18:06:44.775  INFO 11704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6666 (http) with context path ''
+2020-04-05 18:06:44.780  INFO 11704 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Started LghBlogApplication in 6.51 seconds (JVM running for 9.374)
+2020-04-05 18:06:58.411  INFO 11704 --- [http-nio-6666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 18:06:58.412  INFO 11704 --- [http-nio-6666-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 18:06:58.425  INFO 11704 --- [http-nio-6666-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-04-05 18:06:58.552 ERROR 11704 --- [http-nio-6666-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lgh.blog.service.TestService.getTestById] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lgh.blog.service.TestService.getTestById
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:107) ~[mybatis-3.5.4.jar:3.5.4]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660) ~[na:1.8.0_181]
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94) ~[mybatis-3.5.4.jar:3.5.4]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.4.jar:3.5.4]
+	at com.sun.proxy.$Proxy68.getTestById(Unknown Source) ~[na:na]
+	at com.lgh.blog.controller.TestController.getTestById(TestController.java:17) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2020-04-05 18:08:06.317  INFO 12936 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Starting LghBlogApplication on DESKTOP-NO3AVTJ with PID 12936 (F:\IdeaProjects\lgh-blog\target\classes started by LGH in F:\IdeaProjects\lgh-blog)
+2020-04-05 18:08:06.321 DEBUG 12936 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-05 18:08:06.322  INFO 12936 --- [restartedMain] com.lgh.blog.LghBlogApplication          : No active profile set, falling back to default profiles: default
+2020-04-05 18:08:06.424  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-05 18:08:06.425  INFO 12936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-05 18:08:08.949  INFO 12936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6666 (http)
+2020-04-05 18:08:08.965  INFO 12936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-05 18:08:08.965  INFO 12936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-05 18:08:09.188  INFO 12936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-05 18:08:09.188  INFO 12936 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2763 ms
+2020-04-05 18:08:09.836  INFO 12936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-05 18:08:09.991  WARN 12936 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-04-05 18:08:10.130  WARN 12936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-04-05 18:08:10.214  INFO 12936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6666 (http) with context path ''
+2020-04-05 18:08:10.220  INFO 12936 --- [restartedMain] com.lgh.blog.LghBlogApplication          : Started LghBlogApplication in 5.222 seconds (JVM running for 8.139)
+2020-04-05 18:08:23.574  INFO 12936 --- [http-nio-6666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-05 18:08:23.576  INFO 12936 --- [http-nio-6666-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-05 18:08:23.589  INFO 12936 --- [http-nio-6666-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-04-05 18:08:23.887  INFO 12936 --- [http-nio-6666-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-05 18:08:26.923 DEBUG 12936 --- [http-nio-6666-exec-1] c.l.blog.mapper.TestMapper.getTestById   : ==>  Preparing: SELECT * FROM test WHERE id = ? 
+2020-04-05 18:08:26.973 DEBUG 12936 --- [http-nio-6666-exec-1] c.l.blog.mapper.TestMapper.getTestById   : ==> Parameters: 1(Integer)
+2020-04-05 18:08:27.043 DEBUG 12936 --- [http-nio-6666-exec-1] c.l.blog.mapper.TestMapper.getTestById   : <==      Total: 1
+2020-04-05 18:09:06.196 DEBUG 12936 --- [http-nio-6666-exec-2] c.l.blog.mapper.TestMapper.getTestById   : ==>  Preparing: SELECT * FROM test WHERE id = ? 
+2020-04-05 18:09:06.197 DEBUG 12936 --- [http-nio-6666-exec-2] c.l.blog.mapper.TestMapper.getTestById   : ==> Parameters: 2(Integer)
+2020-04-05 18:09:06.229 DEBUG 12936 --- [http-nio-6666-exec-2] c.l.blog.mapper.TestMapper.getTestById   : <==      Total: 1

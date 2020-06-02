@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://49.233.196.215:3306/blog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: lghlgh
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    maxActive: 20
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  # type-aliases-package: com.lgh.blog.entity
+
+logging:
+  level:
+    root: info
+    com.lgh: debug
+  file: log/blog-pro.log
+
+
+server:
+  port: 6666
